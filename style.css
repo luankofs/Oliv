@@ -7,20 +7,38 @@
 
 body{
     font-family: 'Exo', sans-serif;
+    height: 200vh;
 }
-
 
 .context {
-    width: 100%;
     position: absolute;
-    top:50vh;
-    
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    align-items: center;
+    justify-content: center;
 }
 
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
+#oliv-logo {
+    display: block;
+    width: 400px;
+    opacity: 95%;
+}
+
+#subtitle-launcher {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+
+a:hover {
+    background-color: #4e54c8;
 }
 
 
@@ -132,13 +150,13 @@ body{
 
 @keyframes animate {
 
-    0%{
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
