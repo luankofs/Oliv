@@ -11,61 +11,35 @@ body{
 
 .context {
     position: absolute;
-    top: 5%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -60%);
     align-items: center;
     justify-content: center;
 }
 
 #oliv-logo {
     display: block;
-    width: 400px;
+    width: 500px;
     opacity: 95%;
 }
 
 #subtitle-launcher {
     position: absolute;
-    top: 27%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -100%);
     font-weight: 400;
     letter-spacing: 0.2em;
     color: white;
 }
 
-a:hover {
-    background-color: #4e54c8;
-}
-
-#enter-site {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-#enter-site a {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-decoration: none;
-    padding: 13px;
-    background-color: #000000;
-    border-radius: 0px 0px 12px 0px;
-}
-
-#enter-site a:hover {
-    background-color:#8f94fb;
-    color: #000;
-    transition-duration: 1s;
-}
-
 
 .area{
-    background: #4e54c8;  
+    background-image: linear-gradient(to bottom right, rgb(195, 130, 255), rgb(119, 0, 255));
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 }
 
 .circles{
