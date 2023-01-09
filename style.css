@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: Neuron;
+    src: url(fonts/Neuron\ Angled\ SC\ W01\ Regular.ttf);
+}
 
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 }
 
 :root {
@@ -11,12 +15,11 @@
     ---color02: #8612FC;
     ---color03: #D9FF57;
     ---color04: #FFD957;
-
+    ---color05: rgb(194, 194, 194);
 }
 
 body{
     font-family: 'Exo', sans-serif;
-    
 }
 
 header {
@@ -40,7 +43,7 @@ header {
 
 #subtitle-launcher {
     position: absolute;
-    top: 15%;
+    top: 11.5%;
     left: 50%;
     transform: translate(-50%, -100%);
     font-size: 0.8em;
@@ -57,23 +60,154 @@ header {
 }
 
 main {
-    width: 99.2vw;
-    height: 100vh;
-    background: #D9FF57;
+    position: relative;
+    top: 20px;
 }
 
-.wave {
+.waves {
     position: absolute; 
-    bottom: -1px;
-    left: 0;
+    top: 400px;
+    left: 0px;
+    right: 0px;
 }
 
+.wave1 {
+    animation: moveWave1 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+    from {
+        transform: translate(-2000px);
+    }
+}
+
+.wave2 {
+    animation: moveWave1 3s 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+    from {
+        transform: translate(-1800px);
+    }
+}
+
+.wave3 {
+    animation: moveWave1 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+    from {
+        transform: translate(-1600px);
+    }
+}
+
+/* DIGITAÇÃO DE TEXTO 
+
+=====================
+
+*/
+
+.anima{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 5em;
+    color: #fff;
+    border-right: 2px solid rgb(0, 0, 0);
+    padding-right: 3px;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: pisca normal infinite .8s, escrever normal 7s steps(60) both;
+}
+
+@keyframes pisca {
+    100%{
+        border-right-color: transparent;
+    }
+}
+
+@keyframes escrever {
+    100%{
+        max-width: 100%;
+    }
+}
+
+ /* DIGITAÇÃO DE TEXTO ---- FIM 
+
+ ==============================
+
+*/ 
+
+.about1 { 
+    height: 200px;
+    background-image: linear-gradient(to top, #fff, #fff, #fff, #e7e7e7);
+}
+
+.ah1 {
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3em;
+    font-weight: 100;
+    color: rgb(46, 46, 46);
+}
+
+.ah2 {
+    position: absolute;
+    top: 0%; 
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 6.8em;
+    color: var(---color02);
+    font-weight: bolder;
+    font-family: Neuron;
+}
+
+.ah2::before {
+    content: '.';
+    position: absolute;
+    left: -20px;
+    color: var(---color04);
+}
+
+#colorbg {
+    position: relative; 
+    top: -40px;
+    background-image: linear-gradient(to bottom, #FFD957, #ff923a);
+    max-width: 1500px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.icon1 {
+    width: 64px;
+}
+
+.picon1 {
+    position: relative;
+    color:white;
+    font-size: 1.3em;
+    text-indent: 20px;
+    top: 6px;
+}
+
+.picon2 {
+    position: relative;
+    top: 15px;
+    color: white;
+    left: 70px;
+    text-align: justify;
+    width: 350px;
+}
 
 .area{
-    background-image: linear-gradient(to bottom right, rgb(195, 130, 255), rgb(119, 0, 255));
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    background-image: linear-gradient(to bottom right, #b164ff, #b164ff, #8612FC, #8612FC);
+    background: -webkit-linear-gradient(to left, #090b41, #4e54c8);  
     width: 100%;
-    height: 90vh;
+    height: 130vh;
 }
 
 .circles{
@@ -203,43 +337,3 @@ main {
         
     }
 }
-
-/* DIGITAÇÃO DE TEXTO 
-
-=====================
-
-*/
-
-.anima{
-    position: absolute;
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%);
-    font-size: 4em;
-    display: inline-block;
-    color: #fff;
-    border-right: 2px solid #fff;
-    padding-right: 3px;
-    max-width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: pisca normal infinite .8s, escrever normal 7s steps(60) both;
-}
-
-@keyframes pisca {
-    100%{
-        border-right-color: transparent;
-    }
-}
-
-@keyframes escrever {
-    100%{
-        max-width: 100%;
-    }
-}
-
- /* DIGITAÇÃO DE TEXTO ---- FIM 
-
- ==============================
-
-*/ 
