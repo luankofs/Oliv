@@ -174,28 +174,6 @@ main {
 }
 
 
-.portfolio {
-    position: relative; 
-    margin-top: 100px;
-}
-
-.port1 {
-    position: absolute; 
-    left: 50%; 
-    transform: translate(-150%);
-}
-
-.port2 {
-    position: absolute;
-    left: 50%; 
-    transform: translate(0%);
-    padding: 0px 10px 0px 10px;
-    color: white;
-    background-color: var(---color02);
-    font-family: Neuron;
-}
-
-
 #colorbg {
     position: relative; 
     top: -40px;
@@ -225,6 +203,103 @@ main {
     text-align: justify;
     width: 350px;
 }
+
+
+.portfolio {
+    background-color: var(---color02);
+    height: 100vh;
+    position: relative; 
+}
+
+
+.custom-shape-divider-top-1673441380 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1673441380 svg {
+    position: relative;
+    display: block;
+    width: calc(136% + 1.3px);
+    height: 205px;
+}
+
+.custom-shape-divider-top-1673441380 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.portcontainer {
+    width: 100%;
+    position: absolute;
+    top: 6em;
+}
+
+.h1port1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.h1port2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: neuron;
+    font-size: 4em;
+    background-color: #FFD957;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.containerphotos {
+    position: absolute;
+    top: 13em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.widthcol {
+    width: 1000px;
+}
+
+.portimg {
+    display: inline-block;
+    margin: auto;
+    width: 250px;
+    border: solid 7px var(---color04);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.315);
+}
+
+footer {
+    height: 200px;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1673450794 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1673450794 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 66px;
+}
+
+.custom-shape-divider-bottom-1673450794 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/*fundo animado */
 
 .area{
     background-image: linear-gradient(to bottom right, #b164ff, #b164ff, #8612FC, #8612FC);
@@ -346,17 +421,4 @@ main {
         border-radius: 50%;
     }
 
-}
-
-@media screen and (max-width: 700px) and (max-height: 800px) {
-    #oliv-logo {
-        display: block;
-        width: 150px;
-        opacity: 95%;
-    }
-    
-    #subtitle-launcher {
-        font-size: 0.8em;
-        
-    }
 }
