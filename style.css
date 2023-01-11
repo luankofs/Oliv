@@ -173,6 +173,29 @@ main {
     color: var(---color04);
 }
 
+
+.portfolio {
+    position: relative; 
+    margin-top: 100px;
+}
+
+.port1 {
+    position: absolute; 
+    left: 50%; 
+    transform: translate(-150%);
+}
+
+.port2 {
+    position: absolute;
+    left: 50%; 
+    transform: translate(0%);
+    padding: 0px 10px 0px 10px;
+    color: white;
+    background-color: var(---color02);
+    font-family: Neuron;
+}
+
+
 #colorbg {
     position: relative; 
     top: -40px;
@@ -294,7 +317,7 @@ main {
 .circles li:nth-child(9){
     left: 20%;
     width: 15px;
-    height: 15px;
+    height: 15px; 
     animation-delay: 2s;
     animation-duration: 5s;
 }
@@ -313,7 +336,7 @@ main {
 
     0% {
         transform: translateY(0) rotate(0deg);
-        opacity: 1;
+        opacity: 1; 
         border-radius: 0;
     }
 
