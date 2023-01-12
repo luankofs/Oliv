@@ -26,19 +26,13 @@ header {
     position: relative;
 }
 
-nav {
-    height: 45px;
-    display: flex; 
-}
-
-ul {
-    list-style-type: none;
-    display: inline;
-}
-
-#oliv-logo {
-    width: 120px;
-    opacity: 95%;
+.area {
+    background-image: url(Imagens/back-yellow.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
 }
 
 #ag1 {
@@ -51,43 +45,6 @@ ul {
 main {
     position: relative;
     top: 20px;
-}
-
-.waves {
-    position: absolute; 
-    top: 400px;
-    left: 0px;
-    right: 0px;
-}
-
-.wave1 {
-    animation: moveWave1 3s ease-in-out infinite alternate;
-}
-
-@keyframes moveWave1 {
-    from {
-        transform: translate(-2000px);
-    }
-}
-
-.wave2 {
-    animation: moveWave1 3s 1.2s ease-in-out infinite alternate;
-}
-
-@keyframes moveWave1 {
-    from {
-        transform: translate(-1800px);
-    }
-}
-
-.wave3 {
-    animation: moveWave1 3s ease-in-out infinite alternate;
-}
-
-@keyframes moveWave1 {
-    from {
-        transform: translate(-1600px);
-    }
 }
 
 /* DIGITAÇÃO DE TEXTO 
@@ -108,7 +65,7 @@ main {
     max-width: 0;
     white-space: nowrap;
     overflow: hidden;
-    animation: pisca normal infinite .8s, escrever normal 7s steps(60) both;
+    animation: pisca normal infinite .8s, escrever normal 5s steps(37) both;
 }
 
 @keyframes pisca {
@@ -135,8 +92,7 @@ main {
 }
 
 .ah1 {
-    position: absolute;
-    top: -8%;
+    position: relative;
     left: 50%;
     transform: translate(-50%);
     font-size: 3em;
@@ -145,7 +101,7 @@ main {
 }
 
 .ah2 {
-    position: absolute;
+    position: relative;
     top: 0%; 
     left: 50%;
     transform: translate(-50%);
@@ -164,12 +120,13 @@ main {
 
 
 #colorbg {
-    position: relative; 
-    top: -40px;
-    background-image: linear-gradient(to bottom, #FFD957, #ff923a);
-    max-width: 1500px;
-    border-radius: 20px;
-    padding: 20px;
+    background-image: url(Imagens/back-grey-nossos.png), linear-gradient(to bottom, #FFD957, #ff923a);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    max-width: 100vw;
+    border-radius: 10px 10px 0px 0px;
+    padding: 100px 0px 100px 0px;
 }
 
 .icon1 {
@@ -200,31 +157,9 @@ main {
     position: relative; 
 }
 
-
-.custom-shape-divider-top-1673441380 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1673441380 svg {
-    position: relative;
-    display: block;
-    width: calc(136% + 1.3px);
-    height: 205px;
-}
-
-.custom-shape-divider-top-1673441380 .shape-fill {
-    fill: #FFFFFF;
-}
-
 .portcontainer {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 6em;
 }
 
@@ -288,13 +223,4 @@ footer {
     fill: #FFFFFF;
 }
 
-/*fundo animado */
-
-.area{
-    background-image: url(Imagens/back-yellow.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 130vh;
-}
+/* portrait */ 
