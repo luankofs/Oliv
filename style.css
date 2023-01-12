@@ -18,15 +18,23 @@
     ---color05: rgb(194, 194, 194);
 }
 
-body{
+body,
+html{
     font-family: 'Exo', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
     position: relative;
 }
 
-.area {
+/*navbar*/ 
+
+
+
+/*navbar end*/
+
+div.area {
     background-image: url(Imagens/back-yellow.jpg);
     background-position: center center;
     background-size: cover;
@@ -35,176 +43,245 @@ header {
     height: 100vh;
 }
 
-#ag1 {
-    position: absolute; 
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-main {
-    position: relative;
-    top: 20px;
-}
-
-/* DIGITAÇÃO DE TEXTO 
+/* text-typing
 
 =====================
 
 */
 
-.anima{
+div.anima h1 {
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+.h1yellow {
+    color: var(---color02)
+}
+
+div.anima{
     position: absolute;
     left: 50%;
     top: 30%;
     transform: translate(-50%);
     font-size: 5em;
     color: #fff;
-    border-right: 2px solid rgb(0, 0, 0);
-    padding-right: 3px;
+    border-right: 2px solid rgb(255, 255, 255); /* blink-bar color */
+    padding-right: 20px;
     max-width: 0;
     white-space: nowrap;
     overflow: hidden;
-    animation: pisca normal infinite .8s, escrever normal 5s steps(37) both;
+    animation: blink-bar normal infinite .8s, typing normal 5s steps(37) both;
 }
 
-@keyframes pisca {
+@keyframes blink-bar {
     100%{
         border-right-color: transparent;
     }
 }
 
-@keyframes escrever {
+@keyframes typing {
     100%{
         max-width: 100%;
     }
 }
 
- /* DIGITAÇÃO DE TEXTO ---- FIM 
+/* about section */
 
- ==============================
-
-*/ 
-
-.about1 { 
-    height: 200px;
-    background-image: linear-gradient(to top, #fff, #fff, #fff, #e7e7e7);
+div#colorbg {
+    background-image: linear-gradient(to bottom, var(---color02), var(---color01));
+    position: relative;
+    max-width: 100vw;
+    padding: 20px 80px 100px 30px;
 }
 
-.ah1 {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+.title-about1 {
     font-size: 3em;
     font-weight: 100;
-    color: rgb(46, 46, 46);
+    color: var(---color03);
 }
 
-.ah2 {
-    position: relative;
-    top: 0%; 
-    left: 50%;
-    transform: translate(-50%);
+.title-about2 {
+    margin-top: -35px;
     font-size: 6.8em;
-    color: var(---color02);
+    color: #fff;
     font-weight: bolder;
     font-family: Neuron;
 }
 
-.ah2::before {
+.title-about2::before {
     content: '.';
-    position: absolute;
-    left: -20px;
-    color: var(---color04);
-}
-
-
-#colorbg {
-    background-image: url(Imagens/back-grey-nossos.png), linear-gradient(to bottom, #FFD957, #ff923a);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: initial;
-    max-width: 100vw;
-    border-radius: 10px 10px 0px 0px;
-    padding: 100px 0px 100px 0px;
+    position: relative;
+    color: var(---color03);
 }
 
 .icon1 {
+    display: inline-block;
     width: 64px;
+    margin-top: 2em;
 }
 
-.picon1 {
-    position: relative;
-    color:white;
+.icon1:hover {
+    box-shadow: 3px 3px 100px var(---color03);
+    transition-duration: 1s;
+}
+
+.about-title {
+    color:var(---color03);
+    padding: 20px 0px 10px 0px;
     font-size: 1.3em;
     text-indent: 20px;
-    top: 6px;
 }
 
-.picon2 {
-    position: relative;
-    top: 15px;
+p.about-text {
+    text-indent: 15px;
     color: white;
-    left: 70px;
     text-align: justify;
-    width: 350px;
+    padding: 0px 4.5em 3em 4.5em;
 }
+
+/* gallery section */ 
 
 
 .portfolio {
-    background-color: var(---color02);
-    height: 100vh;
-    position: relative; 
-}
-
-.portcontainer {
-    width: 100%;
     position: relative;
-    top: 6em;
+    background-image: linear-gradient(to bottom, var(---color04), #ffe45b);
+    padding-top: 3em;
 }
 
 .h1port1 {
-    font-size: 2em;
+    font-size: 3em;
     color: #fff;
 }
 
 .h1port2 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     font-family: neuron;
-    font-size: 4em;
-    background-color: #FFD957;
-    border-radius: 5px;
-    padding: 4px;
+    font-size: 6.8em;
+    margin: -0.35em 0em 0.4em 0em;
 }
 
-.containerphotos {
-    position: absolute;
-    top: 13em;
-    left: 50%;
-    transform: translate(-50%);
+
+div.container-gallery {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
 }
 
-.widthcol {
-    width: 1000px;
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
 }
 
-.portimg {
-    display: inline-block;
-    margin: auto;
-    width: 250px;
-    border: solid 7px var(---color04);
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.315);
+.heading span {
+	display: block;
 }
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+    padding: 0.2em;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+/* end gallery portrait */
 
 footer {
     height: 200px;
     position: relative;
 }
 
-.custom-shape-divider-bottom-1673450794 {
+
+/* cut area*/
+
+.custom-shape-divider-bottom-1673546501 {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1673546501 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 97px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1673546501 .shape-fill {
+    fill: var(---color02)
+}
+
+/* cutting about*/
+
+.custom-shape-divider-bottom-1673547004 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1673547004 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 97px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1673547004 .shape-fill {
+    fill: #FFD957;
+}
+
+/* cuting contact */ 
+
+.custom-shape-divider-bottom-1673552383 {
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -212,15 +289,14 @@ footer {
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1673450794 svg {
+.custom-shape-divider-bottom-1673552383 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 66px;
+    height: 96px;
 }
 
-.custom-shape-divider-bottom-1673450794 .shape-fill {
-    fill: #FFFFFF;
+.custom-shape-divider-bottom-1673552383 .shape-fill {
+    fill: #ffffff;
 }
 
-/* portrait */ 
